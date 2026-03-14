@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useAppStore } from "../../store/useAppStore";
 import { LayoutGrid, ChevronDown, ChevronRight } from "lucide-react";
-import { MODALITY_COLORS, MODALITY_LABELS } from "../../utils/constants";
+import { MODALITY_COLORS } from "../../utils/constants";
 import type { ImagingEvent } from "../../types";
 
 /** Assign a subtle color accent per body region for quick visual scanning */
