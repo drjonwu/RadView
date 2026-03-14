@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clinical UI base styles */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  /* Visible focus indicators for keyboard navigation (WCAG 2.4.7) */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-600;
+  }
+
+  /* Skip-to-content link: hidden until focused via Tab */
+  .skip-to-content {
+    @apply sr-only;
+  }
+  .skip-to-content:focus {
+    @apply not-sr-only fixed top-2 left-2 z-[100] bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-lg;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar on mobile bottom nav */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe area padding for phones with home indicator (iPhone X+) */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@layer components {
+  /* Bottom sheet slide-up animation */
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .animate-slide-up {
+    animation: slide-up 0.25s ease-out;
+  }
+
+  /* Popover fade-in (info panel only — not used for view transitions) */
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.15s ease-out;
+  }
+
+  /* Severity badges */
+  .badge-high {
+    @apply bg-red-100 text-red-800 border border-red-200;
+  }
+  .badge-medium {
+    @apply bg-amber-100 text-amber-800 border border-amber-200;
+  }
+  .badge-low {
+    @apply bg-blue-100 text-blue-800 border border-blue-200;
+  }
+
+  /* Verdict banners */
+  .verdict-appropriate {
+    @apply bg-green-50 border-green-300 text-green-800;
+  }
+  .verdict-may {
+    @apply bg-amber-50 border-amber-300 text-amber-800;
+  }
+  .verdict-not {
+    @apply bg-red-50 border-red-300 text-red-800;
+  }
+
+}

@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#3B82F6"/>
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-violet" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#7C3AED"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="620" rx="12" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="480" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0F172A">RadView — Hybrid Intelligence Architecture</text>
+  <text x="480" y="54" text-anchor="middle" font-size="11" fill="#64748B">LLM Extraction → Deterministic Rules → RAG Copilot</text>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- LAYER 1: Input (left) -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="30" y="80" width="170" height="170" rx="10" fill="white" stroke="#E2E8F0" filter="url(#shadow)"/>
+  <text x="115" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#94A3B8" letter-spacing="1">INPUT</text>
+  <!-- Patient icon -->
+  <circle cx="115" cy="140" r="18" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="115" y="145" text-anchor="middle" font-size="16">🏥</text>
+  <text x="115" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#1E293B">Patient Profile</text>
+  <text x="115" y="186" text-anchor="middle" font-size="9" fill="#64748B">Clinical notes</text>
+  <text x="115" y="198" text-anchor="middle" font-size="9" fill="#64748B">Prior radiology reports</text>
+  <text x="115" y="210" text-anchor="middle" font-size="9" fill="#64748B">Labs, allergies, history</text>
+  <text x="115" y="228" text-anchor="middle" font-size="9" fill="#64748B">Imaging order under review</text>
+  <rect x="62" y="235" width="106" height="8" rx="4" fill="#DBEAFE"/>
+
+  <!-- Arrow: Input → Extraction -->
+  <line x1="200" y1="165" x2="250" y2="165" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- LAYER 2: LLM Extraction (center-left) -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="260" y="80" width="195" height="170" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="260" y="80" width="195" height="24" rx="10" fill="#3B82F6"/>
+  <rect x="260" y="94" width="195" height="10" fill="#3B82F6"/>
+  <text x="357" y="96" text-anchor="middle" font-size="10" font-weight="700" fill="white" letter-spacing="1">LAYER 1 — LLM EXTRACTION</text>
+
+  <text x="280" y="124" font-size="10" fill="#1E40AF" font-weight="600">Gemini 2.0 Flash</text>
+  <text x="280" y="139" font-size="9" fill="#475569">• Structured JSON output mode</text>
+  <text x="280" y="153" font-size="9" fill="#475569">• Zod schema validation</text>
+  <text x="280" y="167" font-size="9" fill="#475569">• Prompt injection defense</text>
+  <text x="280" y="181" font-size="9" fill="#475569">• Retry with backoff</text>
+  <text x="280" y="195" font-size="9" fill="#475569">• 30s cancellable timeout</text>
+
+  <rect x="275" y="208" width="165" height="28" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="357" y="221" text-anchor="middle" font-size="9" fill="#1E40AF" font-weight="600">Output: ImagingEvent[]</text>
+  <text x="357" y="232" text-anchor="middle" font-size="8" fill="#3B82F6">date, modality, findings, contrast...</text>
+
+  <!-- Label: Probabilistic -->
+  <rect x="308" y="245" width="100" height="16" rx="8" fill="#DBEAFE"/>
+  <text x="358" y="256" text-anchor="middle" font-size="8" font-weight="600" fill="#1E40AF">PROBABILISTIC</text>
+
+  <!-- Arrow: Extraction → Rules (downward-right) -->
+  <path d="M 455 165 L 505 165" stroke="#3B82F6" stroke-width="1.5" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Contract boundary label on arrow -->
+  <rect x="459" y="148" width="45" height="14" rx="3" fill="#FEF3C7"/>
+  <text x="482" y="158" text-anchor="middle" font-size="7" font-weight="600" fill="#92400E">ZOD ✓</text>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- LAYER 3: Rules Engine (center-right) -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="515" y="80" width="195" height="170" rx="10" fill="white" stroke="#6EE7B7" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="515" y="80" width="195" height="24" rx="10" fill="#059669"/>
+  <rect x="515" y="94" width="195" height="10" fill="#059669"/>
+  <text x="612" y="96" text-anchor="middle" font-size="10" font-weight="700" fill="white" letter-spacing="1">LAYER 2 — RULES ENGINE</text>
+
+  <text x="535" y="124" font-size="10" fill="#065F46" font-weight="600">Deterministic Evaluation</text>
+  <text x="535" y="139" font-size="9" fill="#475569">• ACR Appropriateness Criteria</text>
+  <text x="535" y="153" font-size="9" fill="#475569">• Choosing Wisely guidelines</text>
+  <text x="535" y="167" font-size="9" fill="#475569">• Contrast safety (eGFR, allergy)</text>
+  <text x="535" y="181" font-size="9" fill="#475569">• Repeat scan detection</text>
+  <text x="535" y="195" font-size="9" fill="#475569">• Pediatric radiation safety</text>
+
+  <rect x="530" y="208" width="165" height="28" rx="6" fill="#ECFDF5" stroke="#6EE7B7"/>
+  <text x="612" y="221" text-anchor="middle" font-size="9" fill="#065F46" font-weight="600">Output: Verdict + Alerts</text>
+  <text x="612" y="232" text-anchor="middle" font-size="8" fill="#059669">rating, severity, citations, recs</text>
+
+  <!-- Label: Deterministic -->
+  <rect x="559" y="245" width="106" height="16" rx="8" fill="#D1FAE5"/>
+  <text x="612" y="256" text-anchor="middle" font-size="8" font-weight="600" fill="#065F46">DETERMINISTIC</text>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- LAYER 4: RAG Copilot (bottom-center) -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="260" y="300" width="450" height="155" rx="10" fill="white" stroke="#C4B5FD" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="260" y="300" width="450" height="24" rx="10" fill="#7C3AED"/>
+  <rect x="260" y="314" width="450" height="10" fill="#7C3AED"/>
+  <text x="485" y="316" text-anchor="middle" font-size="10" font-weight="700" fill="white" letter-spacing="1">LAYER 3 — RAG COPILOT</text>
+
+  <!-- RAG pipeline boxes -->
+  <rect x="278" y="338" width="90" height="48" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="323" y="356" text-anchor="middle" font-size="9" font-weight="600" fill="#5B21B6">Chunk</text>
+  <text x="323" y="370" text-anchor="middle" font-size="8" fill="#7C3AED">800 tok / 150 overlap</text>
+  <text x="323" y="380" text-anchor="middle" font-size="8" fill="#7C3AED">sentence boundaries</text>
+
+  <line x1="368" y1="362" x2="388" y2="362" stroke="#7C3AED" stroke-width="1" marker-end="url(#arrow-violet)"/>
+
+  <rect x="392" y="338" width="90" height="48" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="437" y="356" text-anchor="middle" font-size="9" font-weight="600" fill="#5B21B6">Embed</text>
+  <text x="437" y="370" text-anchor="middle" font-size="8" fill="#7C3AED">text-embedding-004</text>
+  <text x="437" y="380" text-anchor="middle" font-size="8" fill="#7C3AED">768-dim vectors</text>
+
+  <line x1="482" y1="362" x2="502" y2="362" stroke="#7C3AED" stroke-width="1" marker-end="url(#arrow-violet)"/>
+
+  <rect x="506" y="338" width="90" height="48" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="551" y="356" text-anchor="middle" font-size="9" font-weight="600" fill="#5B21B6">Retrieve</text>
+  <text x="551" y="370" text-anchor="middle" font-size="8" fill="#7C3AED">Hybrid: 70% semantic</text>
+  <text x="551" y="380" text-anchor="middle" font-size="8" fill="#7C3AED">+ 30% keyword (Top-5)</text>
+
+  <line x1="596" y1="362" x2="616" y2="362" stroke="#7C3AED" stroke-width="1" marker-end="url(#arrow-violet)"/>
+
+  <rect x="620" y="338" width="76" height="48" rx="6" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="658" y="356" text-anchor="middle" font-size="9" font-weight="600" fill="#5B21B6">Generate</text>
+  <text x="658" y="370" text-anchor="middle" font-size="8" fill="#7C3AED">Gemini 2.0 Flash</text>
+  <text x="658" y="380" text-anchor="middle" font-size="8" fill="#7C3AED">grounded Q&amp;A</text>
+
+  <!-- RAG features row -->
+  <text x="278" y="410" font-size="9" fill="#475569">• Medical synonym expansion (26 groups: CT↔computed tomography, HCC↔hepatocellular carcinoma...)</text>
+  <text x="278" y="424" font-size="9" fill="#475569">• Conversation history with turn limit • Singleton cache per patient • Cancellable timeouts</text>
+  <text x="278" y="438" font-size="9" fill="#475569">• Input sanitization &amp; XML data boundaries • Source attribution with chunk references</text>
+
+  <!-- Label -->
+  <rect x="435" y="447" width="100" height="16" rx="8" fill="#EDE9FE"/>
+  <text x="485" y="458" text-anchor="middle" font-size="8" font-weight="600" fill="#5B21B6">PROBABILISTIC</text>
+
+  <!-- Arrow: Input down to RAG -->
+  <path d="M 115 250 L 115 377 L 258 377" stroke="#7C3AED" stroke-width="1.5" fill="none" marker-end="url(#arrow-violet)" stroke-dasharray="5,3"/>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- UI Layer (right side) -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="750" y="80" width="185" height="380" rx="10" fill="white" stroke="#E2E8F0" filter="url(#shadow)"/>
+  <rect x="750" y="80" width="185" height="24" rx="10" fill="#0F172A"/>
+  <rect x="750" y="94" width="185" height="10" fill="#0F172A"/>
+  <text x="842" y="96" text-anchor="middle" font-size="10" font-weight="700" fill="white" letter-spacing="1">UI — REACT + ZUSTAND</text>
+
+  <!-- View cards -->
+  <rect x="764" y="114" width="157" height="30" rx="5" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="772" y="132" font-size="9" fill="#1E293B" font-weight="600">📋 Source Evidence</text>
+
+  <rect x="764" y="150" width="157" height="30" rx="5" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="772" y="168" font-size="9" fill="#1E293B" font-weight="600">⏱ Imaging Timeline</text>
+
+  <rect x="764" y="186" width="157" height="30" rx="5" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="772" y="204" font-size="9" fill="#1E293B" font-weight="600">🗂 By Body Region</text>
+
+  <rect x="764" y="222" width="157" height="30" rx="5" fill="#ECFDF5" stroke="#6EE7B7"/>
+  <text x="772" y="240" font-size="9" fill="#065F46" font-weight="600">🛡 Appropriateness</text>
+
+  <rect x="764" y="258" width="157" height="30" rx="5" fill="#F5F3FF" stroke="#DDD6FE"/>
+  <text x="772" y="276" font-size="9" fill="#5B21B6" font-weight="600">💬 Ask Copilot</text>
+
+  <!-- Tech stack -->
+  <line x1="764" y1="300" x2="921" y2="300" stroke="#E2E8F0"/>
+  <text x="842" y="318" text-anchor="middle" font-size="9" fill="#64748B" font-weight="600">Stack</text>
+  <text x="772" y="336" font-size="9" fill="#475569">React 19 + TypeScript</text>
+  <text x="772" y="350" font-size="9" fill="#475569">Zustand 5 (state)</text>
+  <text x="772" y="364" font-size="9" fill="#475569">Tailwind CSS 3</text>
+  <text x="772" y="378" font-size="9" fill="#475569">Vite 6 (build)</text>
+  <text x="772" y="392" font-size="9" fill="#475569">Zod 3 (validation)</text>
+  <text x="772" y="406" font-size="9" fill="#475569">Vitest (368 tests)</text>
+  <text x="772" y="420" font-size="9" fill="#475569">Lucide React (icons)</text>
+
+  <rect x="764" y="432" width="157" height="18" rx="4" fill="#FEF3C7"/>
+  <text x="842" y="444" text-anchor="middle" font-size="8" font-weight="600" fill="#92400E">Error Boundary + ErrorBoundary</text>
+
+  <!-- Arrows: Layers → UI -->
+  <path d="M 710 165 L 748 165" stroke="#059669" stroke-width="1.5" fill="none" marker-end="url(#arrow-emerald)"/>
+  <path d="M 710 377 L 735 377 L 735 273 L 748 273" stroke="#7C3AED" stroke-width="1.5" fill="none" marker-end="url(#arrow-violet)"/>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- Bottom: Security & Testing strip -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <rect x="30" y="490" width="905" height="110" rx="10" fill="white" stroke="#E2E8F0" filter="url(#shadow)"/>
+
+  <!-- Security section -->
+  <rect x="42" y="502" width="280" height="88" rx="6" fill="#FFF7ED" stroke="#FED7AA"/>
+  <text x="52" y="518" font-size="10" font-weight="700" fill="#9A3412">🔐 Security — Defense in Depth</text>
+  <text x="52" y="534" font-size="9" fill="#475569">• Input sanitization (strip XML/tags, control chars)</text>
+  <text x="52" y="548" font-size="9" fill="#475569">• XML-tagged data boundaries in all LLM prompts</text>
+  <text x="52" y="562" font-size="9" fill="#475569">• Zod contract boundary: LLM output = untrusted input</text>
+  <text x="52" y="576" font-size="9" fill="#475569">• Conversation history sanitization (user msgs only)</text>
+
+  <!-- Testing section -->
+  <rect x="338" y="502" width="280" height="88" rx="6" fill="#F0FDF4" stroke="#BBF7D0"/>
+  <text x="348" y="518" font-size="10" font-weight="700" fill="#166534">✅ Testing — 368 Tests</text>
+  <text x="348" y="534" font-size="9" fill="#475569">• geminiService: 83 tests (extraction, retry, timeout)</text>
+  <text x="348" y="548" font-size="9" fill="#475569">• ragService: 100 tests (chunk, embed, retrieve, gen)</text>
+  <text x="348" y="562" font-size="9" fill="#475569">• rulesEngine: 99 tests (ACR, contrast, repeat, peds)</text>
+  <text x="348" y="576" font-size="9" fill="#475569">• Components: 86 tests (views, routing, a11y, errors)</text>
+
+  <!-- Design Principles section -->
+  <rect x="634" y="502" width="289" height="88" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="644" y="518" font-size="10" font-weight="700" fill="#1E40AF">💡 Design Principles</text>
+  <text x="644" y="534" font-size="9" fill="#475569">• Hybrid intelligence: LLM + deterministic + RAG</text>
+  <text x="644" y="548" font-size="9" fill="#475569">• Rules engine always runs fresh (auditable)</text>
+  <text x="644" y="562" font-size="9" fill="#475569">• Demo mode: precomputed data, no API key needed</text>
+  <text x="644" y="576" font-size="9" fill="#475569">• Responsive UI, accessible (ARIA, semantic HTML)</text>
+</svg>
